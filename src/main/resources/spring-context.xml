@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="action" class="com.lanou.aop.Action"/>
+    <bean id="girl" class="com.lanou.aop.Girl"/>
+
+    <!--配置app-->
+    <aop:config>
+        <!--定义切面-->
+        <aop:aspect id="aspect1" ref="action">
+            <!--定义切入点-->
+            <aop:pointcut id="pointcut1" expression="bean(girl)"/>
+            <!--定义通知-->
+            <!--针对哪个切入点-->
+            <aop:before method="makeup" pointcut-ref="pointcut1"/>
+        </aop:aspect>
+
+    </aop:config>
+
+</beans>
