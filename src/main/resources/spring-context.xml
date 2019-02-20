@@ -11,7 +11,8 @@
         <!--定义切面-->
         <aop:aspect id="aspect1" ref="action">
             <!--定义切入点-->
-            <aop:pointcut id="pointcut1" expression="bean(girl)"/>
+            <!--<aop:pointcut id="pointcut1" expression="bean(girl)"/>-->
+            <aop:pointcut id="pointcut1" expression="execution(public void shopping())"/>
             <!--定义通知-->
             <!--针对哪个切入点-->
             <aop:before method="makeup" pointcut-ref="pointcut1"/>

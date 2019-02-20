@@ -24,6 +24,15 @@ public class Main {
         //5.after:后置通知,在连接点执行后(包括正常执行和抛出异常)通知
 
 
+        //pointcut expression:切入点的表达式,用于匹配指定的连接点(Spring中连接点都是方法级)
+        //bean(bean的id):匹配bean中的所有方法
+        //execution(访问修饰符 返回值数据类型 方法名(参数类型)):匹配指定方法
+        //this:匹配指定的类
+        //target:匹配指定接口的实现类
+        //within:匹配指定包中的类
+
+
+
 
 
 
