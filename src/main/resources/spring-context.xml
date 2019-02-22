@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <bean id="action" class="com.lanou.aop.Action"/>
+    <!--接受通知-->
     <bean id="girl" class="com.lanou.aop.Girl"/>
 
     <!--配置app-->
@@ -17,7 +18,7 @@
             <!--针对哪个切入点-->
             <aop:before method="makeup" pointcut-ref="pointcut1"/>
         </aop:aspect>
-
+<!--发送通知-->
     </aop:config>
 
 </beans>

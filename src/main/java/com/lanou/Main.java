@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-//面向切面编程(AOP):是对面向对象编程的补充,能减少代码的冗余
+        //面向切面编程(AOP):是对面向对象编程的补充,能减少代码的冗余
         //面向切面编程的术语:
         //1.切面(Aspect):一个关注点的模块化,这个关注点可能横切多个对象
         //2.连接点(JointPoint):程序执行到某个位置
